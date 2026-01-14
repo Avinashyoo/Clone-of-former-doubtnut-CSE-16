@@ -1,0 +1,65 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif;}
+body{background:#ffeedb;padding-bottom:70px;}
+input[type=radio], input[type=checkbox]{display:none;}
+.app{padding-bottom:70px;}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,#ff7f50,#ff4500);color:white;padding:12px;font-weight:600;text-align:center;}
+
+/* PAGES VISIBILITY */
+.page{display:none;}
+#tab-home:checked ~ .app .home-page,
+#tab-ask:checked ~ .app .ask-page,
+#tab-learn:checked ~ .app .learn-page,
+#tab-profile:checked ~ .app .profile-page{display:block;}
+
+/* SEARCH */
+.search-box{padding:15px;}
+.search-box input{width:100%;padding:12px;border-radius:8px;border:none;box-shadow:0 2px 6px rgba(0,0,0,.15);background:#ffd8a8;}
+
+/* TITLES */
+.section-title{padding:0 15px;margin:10px 0;color:#e65c00; font-weight:600;}
+
+/* SUBJECTS */
+.subjects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:15px;}
+.sub{padding:20px;border-radius:12px;color:white;font-weight:600;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.15);}
+.maths{background:linear-gradient(135deg,#ff9f43,#ff6f00);}
+.physics{background:linear-gradient(135deg,#ff7f50,#ff5722);}
+.chemistry{background:linear-gradient(135deg,#ffb84d,#ff9933);}
+.biology{background:linear-gradient(135deg,#ffc266,#ff8c42);}
+
+/* Sample question toggle */
+.sample-q{padding:15px;}
+.sample-q .q-content{display:none;padding:10px;background:#fff0e0;margin-top:5px;border-radius:8px;}
+#show-q1:checked + .q-title + .q-content{display:block;}
+
+/* ASK DOUBT */
+.ask-doubt{background:#fff0e0;margin:15px;padding:15px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+.upload-box{display:flex;gap:10px;margin-top:10px;}
+.up{flex:1;background:#ffd8a8;padding:12px;border-radius:10px;text-align:center;cursor:pointer;font-weight:600;}
+.note{font-size:12px;opacity:.7;margin-top:5px;color:#7f3f00;}
+
+/* PHOTO / VIDEO CONTENT */
+.photo-content, .video-content{display:none;background:#ffe0b3;padding:10px;margin-top:8px;border-radius:8px;}
+#upload-photo:checked ~ .upload-box + .upload-content .photo-content{display:block;}
+#upload-video:checked ~ .upload-box + .upload-content .video-content{display:block;}
+
+/* PREVIEW BOX */
+.preview{background:#fff3e6;margin-top:10px;padding:10px;border-radius:8px;text-align:center;border:2px dashed #ff9933;color:#7f3f00;}
+.preview img{max-width:100%;border-radius:8px;margin-top:5px;}
+
+/* VIDEOS */
+.videos{padding:15px;}
+.videos iframe{width:100%;height:200px;margin-bottom:10px;border-radius:10px;border:none;}
+
+/* PROFILE */
+.profile-card{background:#fff0e0;margin:15px;padding:20px;border-radius:12px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+.profile-card .avatar{width:60px;height:60px;background:linear-gradient(135deg,#ff7f50,#ff4500);border-radius:50%;margin:0 auto 10px;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;}
+.profile-actions{padding:0 15px;margin-top:10px;}
+.profile-actions .action-content{display:none;padding:10px;background:#ffd8a8;border-radius:8px;margin-top:5px;}
+#show-settings:checked + .action + .action-content{display:block;}
+.action{background:#ffd8a8;padding:12px;margin-bottom:10px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.15);cursor:pointer;font-weight:600;text-align:center;color:#7f3f00;}
+
+/* BOTTOM NAV */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#ff7f50,#ff4500);display:flex;justify-content:space-around;padding:10px 0;box-shadow:0 -2px 6px rgba(0,0,0,.15);}
+.bottom-nav label{cursor:pointer;font-weight:600;color:white;}
