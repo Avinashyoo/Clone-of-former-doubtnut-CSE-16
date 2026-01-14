@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Doubtnut Clone - Orange Theme</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== TABS for navigation ===== -->
+<input type="radio" name="page" id="tab-home" checked>
+<input type="radio" name="page" id="tab-ask">
+<input type="radio" name="page" id="tab-learn">
+<input type="radio" name="page" id="tab-profile">
+
+<div class="app">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <div class="logo">Doubtnut Clone</div>
+  </div>
+
+  <!-- ===== HOME PAGE ===== -->
+  <div class="page home-page">
+    <div class="search-box">
+      <input type="text" placeholder="Search your doubt...">
+    </div>
+
+    <h3 class="section-title">Choose Subject</h3>
+    <div class="subjects">
+      <div class="sub maths">Maths</div>
+      <div class="sub physics">Physics</div>
+      <div class="sub chemistry">Chemistry</div>
+      <div class="sub biology">Biology</div>
+    </div>
+
+    <div class="sample-q">
+      <input type="checkbox" id="show-q1">
+      <label for="show-q1" class="q-title">Click to see sample question</label>
+      <div class="q-content">
+        <b>Q:</b> What is acceleration?<br>
+        <b>A:</b> Acceleration is the rate of change of velocity with time.
+      </div>
+    </div>
+
+    <h3 class="section-title">Watch & Learn</h3>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/QBF7xQTZbIY"></iframe>
+      <iframe src="https://www.youtube.com/embed/m5VbK66a254"></iframe>
+    </div>
+  </div>
+
+  <!-- ===== ASK DOUBT PAGE ===== -->
+  <div class="page ask-page">
+    <div class="ask-doubt">
+      <h3>Upload your doubt</h3>
+      <p>Select photo or video of your question</p>
+
+      <!-- Radio buttons for type selection -->
+      <input type="radio" name="upload" id="upload-photo" checked>
+      <input type="radio" name="upload" id="upload-video">
+
+      <div class="upload-box">
+        <label class="up" for="upload-photo">📸 Photo</label>
+        <label class="up" for="upload-video">🎥 Video</label>
+      </div>
+
+      <div class="upload-content">
+        <!-- PHOTO UPLOAD -->
+        <div class="photo-content">
+          <p>You selected: Photo upload</p>
+          <input type="file" accept="image/*">
+          <div class="preview">
+            <p>Preview will appear here</p>
+            <img src="" alt="Your image" id="img-preview">
+          </div>
+        </div>
+
+        <!-- VIDEO UPLOAD -->
+        <div class="video-content">
+          <p>You selected: Video upload</p>
+          <input type="file" accept="video/*">
+          <div class="preview">
+            <p>Sample video placeholder</p>
+            <video width="100%" controls>
+              <source src="https://www.youtube.com/embed/QBF7xQTZbIY" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">*UI only, cannot actually upload without backend</p>
+    </div>
+  </div>
+
+  <!-- ===== LEARN PAGE ===== -->
+  <div class="page learn-page">
+    <h3 class="section-title">Subjects</h3>
+    <div class="subjects learn-subjects">
+      <div class="sub maths">Maths</div>
+      <div class="sub physics">Physics</div>
+      <div class="sub chemistry">Chemistry</div>
+      <div class="sub biology">Biology</div>
+    </div>
+
+    <div class="subject-info">
+      <p>Select a subject above to see sample videos.</p>
+    </div>
+
+    <h3 class="section-title">Video Lessons</h3>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/QBF7xQTZbIY"></iframe>
+      <iframe src="https://www.youtube.com/embed/m5VbK66a254"></iframe>
+      <iframe src="https://www.youtube.com/embed/CBZDHV2DRQY"></iframe>
+      <iframe src="https://www.youtube.com/embed/pJZ73CR2oR8"></iframe>
+      <iframe src="https://www.youtube.com/embed/GfKmguqX-2g"></iframe>
+    </div>
+  </div>
+
+  <!-- ===== PROFILE PAGE ===== -->
+  <div class="page profile-page">
+    <div class="profile-card">
+      <div class="avatar">U</div>
+      <h3>Username</h3>
+      <p>Email: user@example.com</p>
+    </div>
+
+    <div class="profile-actions">
+      <input type="checkbox" id="show-settings">
+      <label for="show-settings" class="action">⚙ Settings</label>
+      <div class="action-content">
+        <p>Change password / preferences</p>
+      </div>
+      <div class="action">🚪 Logout</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== BOTTOM NAV ===== -->
+<div class="bottom-nav">
+  <label for="tab-home">🏠 Home</label>
+  <label for="tab-ask">📷 Ask</label>
+  <label for="tab-learn">📚 Learn</label>
+  <label for="tab-profile">👤 Profile</label>
+</div>
+
+</body>
+</html>
